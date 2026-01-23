@@ -1,0 +1,32 @@
+{
+  "Model": "Items/Tiny_Charm.blockymodel",
+  "Texture": "Items/texture.png",
+  "Icon": "Icons/ItemsGenerated/Tiny_Charm.png",
+  "Quality": "Rare",
+  "IconProperties": {
+    "Scale": 1.1,
+    "Rotation": [
+      42,
+      331,
+      0
+    ],
+    "Translation": [
+      -1,
+      -5
+    ]
+  },
+  "Container": {
+    "ItemTag": "TinyCharm"
+  },
+  "TranslationProperties": {
+    "Name": "Tiny Charm",
+    "Description": "A mysterious charm that allows the user to change their size."
+  },
+  "UsePlayerAnimations": false,
+  "ItemLevel": 10,
+  "Interactions": {
+    "Secondary": {
+      "Type": "tiny_charm_interact"
+    }
+  }
+}

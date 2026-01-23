@@ -1,11 +1,11 @@
 {
-  "Group": "${plugin_group}",
-  "Name": "${plugin_name}",
-  "Version": "${plugin_version}",
+  "Group": "JellyJam",
+  "Name": "JellyJamMod",
+  "Version": "1.0.0",
   "Description": "${plugin_description}",
   "Authors": [
     {
-      "Name": "${plugin_author}"
+      "Name": "JellyJam"
     }
   ],
   "Website": "${plugin_website}",
@@ -14,5 +14,5 @@
   "OptionalDependencies": {},
   "DisabledByDefault": false,
   "IncludesAssetPack": true,
-  "Main": "${plugin_main_entrypoint}"
+  "Main": "me.jellyjam.JellyJamMod"
 }
