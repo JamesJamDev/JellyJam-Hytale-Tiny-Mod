@@ -91,6 +91,26 @@ public class TinyCharmInteraction extends SimpleInstantInteraction {
 
                     movementManager.applyDefaultSettings();
 
+                    PersistentModel model = commandBuffer.getComponent(player.getReference(), PersistentModel.getComponentType());
+
+                    if (model == null) {
+                        model = new PersistentModel(new Model.ModelReference("Player", 1.0f, null));
+                        commandBuffer.addComponent(player.getReference(), PersistentModel.getComponentType(), model);
+                    }
+
+                    Model.ModelReference oldRef = model.getModelReference();
+
+                    Model.ModelReference newRef = new Model.ModelReference(
+                            oldRef.getModelAssetId(),
+                            0.25f,
+                            oldRef.getRandomAttachmentIds(),
+                            oldRef.isStaticModel()
+                    );
+
+                    player.
+
+                    model.setModelReference(newRef);
+
 
 
                     PlayerRef playerRefComponent =
