@@ -26,7 +26,11 @@
   "ItemLevel": 10,
   "Interactions": {
     "Secondary": {
-      "Type": "tiny_charm_interact"
+      "Interactions": [
+        {
+          "Type": "tiny_charm_interact"
+        }
+      ]
     }
   }
 }
