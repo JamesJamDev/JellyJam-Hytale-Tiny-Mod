@@ -1,7 +1,7 @@
 {
   "Model": "Characters/Player.blockymodel",
   "Texture": "Characters/Player_Textures/Player_Greyscale.png",
-  "EyeHeight": 0.8,
+  "EyeHeight": 1.6,
   "CrouchOffset": -0.4,
   "HitBox": {
     "Max": {

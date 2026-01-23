@@ -19,18 +19,50 @@
     "ItemTag": "TinyCharm"
   },
   "TranslationProperties": {
-    "Name": "Tiny Charm",
-    "Description": "A mysterious charm that allows the user to change their size."
+    "Name": "TinyCharm.TinyCharm.name",
+    "Description": "TinyCharm.TinyCharm.description"
   },
   "UsePlayerAnimations": false,
   "ItemLevel": 10,
+  "MaxStack": 1,
   "Interactions": {
     "Secondary": {
       "Interactions": [
         {
           "Type": "tiny_charm_interact"
+        },
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "TinyCharm"
         }
       ]
     }
+  },
+  "Recipe": {
+    "TimeSeconds": 5,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 5
+      },
+      {
+        "ItemId": "Plant_Fruit_Apple",
+        "Quantity": 3
+      },
+      {
+        "ItemId": "Ingredient_Fire_Essence",
+        "Quantity": 5
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Workbench",
+        "Type": "Crafting",
+        "Categories": [
+          "Workbench_Tinkering"
+        ]
+      }
+    ]
   }
 }

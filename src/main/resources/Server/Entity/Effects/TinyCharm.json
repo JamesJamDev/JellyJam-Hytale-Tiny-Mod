@@ -1,7 +1,9 @@
 {
-  "StatusEffectIcon": "Icons/ItemsGenerated/Potion_Purify.png",
+  "StatusEffectIcon": "Icons/ItemsGenerated/Tiny_Charm.png",
+  "StatusEffectId": "TinyPlayer",
+  "StatusEffectName": "Tiny",
   "OverlapBehavior": "Overwrite",
-  "Duration": 9999999,
+  "Duration": 300,
   "ModelChange": "TinyPlayer",
   "ApplicationEffects": {
     "Particles": [
@@ -10,5 +12,16 @@
       }
     ],
     "WorldSoundEventId": "SFX_Wolf_Alerted"
-  }
+  },
+  "Debuff": false,
+  "RemovalBehavior": "Complete",
+  "DamageResistance": {
+    "Environment": [
+      {
+        "Amount": 0,
+        "CalculationType": "Multiplicative"
+      }
+    ]
+  },
+  "Invulnerable": false
 }
