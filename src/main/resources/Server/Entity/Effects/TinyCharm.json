@@ -1,0 +1,14 @@
+{
+  "StatusEffectIcon": "Icons/ItemsGenerated/Potion_Purify.png",
+  "OverlapBehavior": "Overwrite",
+  "Duration": 9999999,
+  "ModelChange": "TinyPlayer",
+  "ApplicationEffects": {
+    "Particles": [
+      {
+        "SystemId": "Potion_Morph_Burst"
+      }
+    ],
+    "WorldSoundEventId": "SFX_Wolf_Alerted"
+  }
+}
