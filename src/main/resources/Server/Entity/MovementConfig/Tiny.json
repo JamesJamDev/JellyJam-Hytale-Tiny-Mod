@@ -54,7 +54,7 @@
   "AutoJumpObstacleEffectDuration": 0.2,
   "AutoJumpObstacleSprintEffectDuration": 0.1,
   "AutoJumpObstacleMaxAngle": 45,
-  "AutoJumpDisableJumping": true,
+  "AutoJumpDisableJumping": false,
   "MinSlideEntrySpeed": 1.75,
   "SlideExitSpeed": 2.5,
   "MinFallSpeedToEngageRoll": 9999,
