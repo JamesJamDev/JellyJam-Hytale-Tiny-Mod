@@ -3,7 +3,7 @@
   "StatusEffectId": "TinyPlayer",
   "StatusEffectName": "Tiny",
   "OverlapBehavior": "Overwrite",
-  "Duration": 300,
+  "Duration": 120,
   "ModelChange": "TinyPlayer",
   "ApplicationEffects": {
     "Particles": [

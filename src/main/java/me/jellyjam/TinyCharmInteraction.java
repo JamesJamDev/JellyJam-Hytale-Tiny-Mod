@@ -64,8 +64,6 @@ public class TinyCharmInteraction extends SimpleInstantInteraction {
             return;
         }
 
-        player.sendMessage(Message.raw("You have used the custom item +" + itemStack.getItemId()));
-
         world.execute(() -> {
             EntityStatMap statMap = (EntityStatMap) store.getComponent(player.getReference(), EntityStatMap.getComponentType());
             if (statMap != null) {
@@ -76,12 +74,12 @@ public class TinyCharmInteraction extends SimpleInstantInteraction {
                 if (movementManager != null)
                 {
                     MovementConfig config = MovementConfig.getAssetMap().getAsset("Tiny");
-                    player.sendMessage(Message.raw(config.getId() + config.getJumpForce()));
+
 
                     PhysicsValues physicsValues =
                             store.getComponent(player.getReference(), PhysicsValues.getComponentType());
 
-                    physicsValues.resetToDefault();
+                    //physicsValues.resetToDefault();
 
                     movementManager.setDefaultSettings(
                             config.toPacket(),
@@ -100,7 +98,7 @@ public class TinyCharmInteraction extends SimpleInstantInteraction {
 
                     movementManager.update(playerRefComponent.getPacketHandler());
 
-                player.sendMessage(Message.raw(world.getGameplayConfig().getPlayerConfig().getMovementConfigId()));
+
                 }
 
 
