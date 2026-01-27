@@ -35,7 +35,6 @@ import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import org.jspecify.annotations.NonNull;
 
 
-
 public class TinyCharmInteraction extends SimpleInstantInteraction {
     public static final BuilderCodec<TinyCharmInteraction> CODEC = BuilderCodec.builder(
             TinyCharmInteraction.class, TinyCharmInteraction::new, SimpleInstantInteraction.CODEC
@@ -49,8 +48,8 @@ public class TinyCharmInteraction extends SimpleInstantInteraction {
             return;
         }
 
-        World world = commandBuffer.getExternalData().getWorld(); // just to show how to get the world if needed
-        Store<EntityStore> store = commandBuffer.getExternalData().getStore(); // just to show how to get the store if needed
+        World world = commandBuffer.getExternalData().getWorld();
+        Store<EntityStore> store = commandBuffer.getExternalData().getStore();
         Ref<EntityStore> ref = interactionContext.getEntity();
         Player player = commandBuffer.getComponent(ref, Player.getComponentType());
         if (player == null) {
@@ -65,21 +64,23 @@ public class TinyCharmInteraction extends SimpleInstantInteraction {
         }
 
         world.execute(() -> {
+
             EntityStatMap statMap = (EntityStatMap) store.getComponent(player.getReference(), EntityStatMap.getComponentType());
+
             if (statMap != null) {
 
-
+                // Get the movement manager
                 MovementManager movementManager = commandBuffer.getComponent(player.getReference(), MovementManager.getComponentType());
 
-                if (movementManager != null)
-                {
+                if (movementManager != null) {
+
+                    // Get the tiny movement config
                     MovementConfig config = MovementConfig.getAssetMap().getAsset("Tiny");
 
 
                     PhysicsValues physicsValues =
                             store.getComponent(player.getReference(), PhysicsValues.getComponentType());
 
-                    //physicsValues.resetToDefault();
 
                     movementManager.setDefaultSettings(
                             config.toPacket(),
@@ -89,22 +90,20 @@ public class TinyCharmInteraction extends SimpleInstantInteraction {
 
                     movementManager.applyDefaultSettings();
 
-
-
+                    // Get reference to the player store component
                     PlayerRef playerRefComponent =
                             store.getComponent(player.getReference(), PlayerRef.getComponentType());
 
+
+                    // Send the updated movement to the player
                     playerRefComponent.getPacketHandler().writeNoCache(new UpdateMovementSettings(config.toPacket()));
 
+                    // Call the update
                     movementManager.update(playerRefComponent.getPacketHandler());
 
-
+                    }
                 }
-
-
-
             }
-                }
-                );
+        );
     }
 }

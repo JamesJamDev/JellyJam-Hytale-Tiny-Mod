@@ -1,8 +1,8 @@
 {
   "Group": "JellyJam",
-  "Name": "JellyJamMod",
+  "Name": "[JellyJam's] Tiny Player",
   "Version": "1.0.0",
-  "Description": "${plugin_description}",
+  "Description": "Allows you to create a 'Tiny Charm' which can turn your player tiny for a brief period of time!",
   "Authors": [
     {
       "Name": "JellyJam"
