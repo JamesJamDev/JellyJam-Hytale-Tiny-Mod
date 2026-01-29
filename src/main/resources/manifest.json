@@ -1,14 +1,14 @@
 {
   "Group": "JellyJam",
   "Name": "[JellyJam's] Tiny Player",
-  "Version": "1.0.0",
+  "Version": "0.5.0",
   "Description": "Allows you to create a 'Tiny Charm' which can turn your player tiny for a brief period of time!",
   "Authors": [
     {
       "Name": "JellyJam"
     }
   ],
-  "Website": "${plugin_website}",
+  "Website": "https://legacy.curseforge.com/hytale/mods/jellyjams-tiny-player-mod",
   "ServerVersion": "${server_version}",
   "Dependencies": {},
   "OptionalDependencies": {},
